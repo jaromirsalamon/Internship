@@ -1,0 +1,22 @@
+!version = 2.0
+
+
++ my gender is (male|female)
+- <set gender=<star1>>I will remember that you are <get gender>.
+
++ what is my gender
+- You are <get gender>.
+
++ [*] me [*] attractive [*]
+* <get gender> == undefined => I'm not sure, are you male or female?
+* <get gender> == male => I'm pretty sure you are an attractive man!
+* <get gender> == female => You are such a beautiful woman!
+
++ male
+% i am not sure are you male or female
+- <set gender=male>I'm pretty sure you are an attractive man! //The chatbot will save the user as "Male" and will give this reponse everytime the question is asked.
+
++ female
+% i am not sure are you male or female
+- <set gender=female>You are such a beautiful woman! //The chatbot will save the user as "Female" and will give this reponse everytime the question is asked.
+
