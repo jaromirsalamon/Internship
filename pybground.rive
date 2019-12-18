@@ -1,0 +1,19 @@
+> begin
+
++ request
+* <bot mood> == happy => {sentence}{ok}{/sentence}
+* <bot mood> == angry => {uppercase}{ok}{/uppercase}
+* <bot mood> == sad => {lowercase}{ok}{/lowercase}
+* <bot mood> == random => {lowercase}{ok}{/lowercase} | {uppercase}{ok}{/uppercase} | {sentence}{ok}{/sentence}
+- {ok}
+
+< begin
+
++ what are you
+- <bot mood=random> I am an artificial intelligence programmed using RiveScript
+
++ you are a bot
+- <bot mood=angry> How did you know I'm a machine?
+
+#the current problem i have is, the moods are not randomised or according to the mood i set it to. 
+#Instead of "HOW DID YOU KNOW I'M A MACHINE?", the chatbot says: "How did you know I'm a machine?"
